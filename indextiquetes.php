@@ -1,7 +1,7 @@
 <?php 
-$enlace = 'mysql:host=localhost;dbname=listado_ae';
-$usuario = 'root';
-$contraseña='root';
+$enlace = 'mysql:host=localhost;dbname=id14545015_tiquetes';
+$usuario = 'id14545015_tiquetero';
+$contraseña='#AwJ5@w5DY=\o~uB';
 
 try {
 
@@ -25,6 +25,12 @@ if($_POST){
     $sentencia_agregacion->execute();
      
 }
+$sql_lectura = 'SELECT * FROM `colores`';
+$gsent = $pdo->prepare($sql_lectura);
+$gsent->execute();
+$resultado = $gsent->fetchAll();
+var_dump($resultado);
+
 ?>
 
 <!doctype html>
